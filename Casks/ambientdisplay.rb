@@ -14,7 +14,9 @@ cask "ambientdisplay" do
 
   caveats <<~EOS
     AmbientDisplay requires BetterDisplay in /Applications/BetterDisplay.app with DDC enabled.
-    Because AmbientDisplay is ad-hoc signed (not Apple-notarized), if Gatekeeper blocks launch run:
-      xattr -dr com.apple.quarantine "/Applications/AmbientDisplay.app"
+    AmbientDisplay is ad-hoc signed (not Apple-notarized).
+    If macOS Gatekeeper blocks first launch:
+      1. Click "Done" -> System Settings -> Privacy & Security -> "Open Anyway"
+      2. Or run: xattr -dr com.apple.quarantine "/Applications/AmbientDisplay.app"
   EOS
 end

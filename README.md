@@ -16,8 +16,10 @@ brew tap alexandryasukaitisss-cmd/tap
 | `ambientdisplay` | [AmbientDisplay](https://github.com/alexandryasukaitisss-cmd/ambient-display-macos) | Webcam-based hardware DDC auto-brightness for external monitors via BetterDisplay | `brew install --cask alexandryasukaitisss-cmd/tap/ambientdisplay` |
 | `ha-pip-cam` | [HA PiP Cam](https://github.com/alexandryasukaitisss-cmd/ha-pip-cam-macos) | Floating Picture-in-Picture live camera viewer for go2rtc / HLS + Home Assistant sensors | `brew install --cask alexandryasukaitisss-cmd/tap/ha-pip-cam` |
 
-> **Gatekeeper note:** Releases are ad-hoc signed rather than Apple-notarized. If macOS Gatekeeper blocks first launch, allow via **Right-click → Open** or clear quarantine:
-> `xattr -dr com.apple.quarantine "/Applications/<AppName>.app"`
+> [!NOTE]
+> **First launch on macOS (not Apple-notarized):** Releases are ad-hoc signed, so macOS Gatekeeper will show *"Apple could not verify `<App>` is free of malware"* on first launch. To open once:
+> - **Without Terminal:** click **Done** (not *Move to Trash*), open **System Settings → Privacy & Security**, scroll down to **Security**, and click **Open Anyway**.
+> - **Or via Terminal:** `xattr -dr com.apple.quarantine "/Applications/<AppName>.app"`
 
 ## License
 

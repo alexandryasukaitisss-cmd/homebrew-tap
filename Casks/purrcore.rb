@@ -14,7 +14,8 @@ cask "purrcore" do
 
   caveats <<~EOS
     PurrCore is ad-hoc signed (not Apple-notarized).
-    If macOS Gatekeeper blocks launch, run:
-      xattr -dr com.apple.quarantine "/Applications/PurrCore.app"
+    If macOS Gatekeeper blocks first launch:
+      1. Click "Done" -> System Settings -> Privacy & Security -> "Open Anyway"
+      2. Or run: xattr -dr com.apple.quarantine "/Applications/PurrCore.app"
   EOS
 end

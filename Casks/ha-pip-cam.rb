@@ -14,7 +14,8 @@ cask "ha-pip-cam" do
 
   caveats <<~EOS
     HA PiP Cam is ad-hoc signed (not Apple-notarized).
-    If macOS Gatekeeper blocks launch, run:
-      xattr -dr com.apple.quarantine "/Applications/HAPiPCam.app"
+    If macOS Gatekeeper blocks first launch:
+      1. Click "Done" -> System Settings -> Privacy & Security -> "Open Anyway"
+      2. Or run: xattr -dr com.apple.quarantine "/Applications/HAPiPCam.app"
   EOS
 end
