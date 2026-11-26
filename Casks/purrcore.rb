@@ -1,6 +1,6 @@
 cask "purrcore" do
-  version "0.5.1"
-  sha256 "2334c08c88271c5947a80bea1b250ecfefc3ee3b826fa6329a56c252bac01abb"
+  version "0.5.3"
+  sha256 "062ceaa644692dd196b7c9e3f85ea1720ba26ca28cec00cd490d4cd9bc76ae2f"
 
   url "https://github.com/alexandryasukaitisss-cmd/purrcore/releases/download/v#{version}/PurrCore-#{version}-macos-arm64.zip"
   name "PurrCore"
