@@ -1,6 +1,6 @@
 cask "ambientdisplay" do
-  version "0.2.0"
-  sha256 "5580498dcc0325f099ba2bf48554908a7cb105b34c1e604c96ebc7b846a9e733"
+  version "0.2.1"
+  sha256 "fa5abefad41d2a8c8cac332ad1ee4759d5b4cca2563cf4d96824c6543fc612fa"
 
   url "https://github.com/alexandryasukaitisss-cmd/ambient-display-macos/releases/download/v#{version}/AmbientDisplay-#{version}-macos-arm64.zip"
   name "AmbientDisplay"
@@ -11,6 +11,12 @@ cask "ambientdisplay" do
   depends_on arch: :arm64
 
   app "AmbientDisplay.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/AmbientDisplay.app"],
+                   must_succeed: false
+  end
 
   caveats <<~EOS
     AmbientDisplay requires BetterDisplay in /Applications/BetterDisplay.app with DDC enabled.

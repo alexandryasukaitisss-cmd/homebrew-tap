@@ -1,6 +1,6 @@
 cask "purrcore" do
-  version "0.6.1"
-  sha256 "03862b00f3bcb7b35854cd07154f4416018767f4188c3aa14ac3894febde2baf"
+  version "0.6.3"
+  sha256 "798b6a5edf853e2117230edf9ce4a14a38aa4b164f4ebdb0613e43e4ada3a9c8"
 
   url "https://github.com/alexandryasukaitisss-cmd/purrcore/releases/download/v#{version}/PurrCore-#{version}-macos-arm64.zip"
   name "PurrCore"
@@ -11,6 +11,12 @@ cask "purrcore" do
   depends_on arch: :arm64
 
   app "PurrCore.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/PurrCore.app"],
+                   must_succeed: false
+  end
 
   caveats <<~EOS
     PurrCore is ad-hoc signed (not Apple-notarized).

@@ -1,6 +1,6 @@
 cask "cadence" do
-  version "0.2.0"
-  sha256 "3bfc4c0be52289f89a174c3e6cc86df69be1c4943e31eabf78a3612059ee88f9"
+  version "0.2.1"
+  sha256 "85fd22cce639d4dbdb69fd85c832e5ab87bc81ebe2827c24c2b58a3cd0f05254"
 
   url "https://github.com/alexandryasukaitisss-cmd/cadence-macos/releases/download/v#{version}/Cadence-#{version}-macos-arm64.zip"
   name "Cadence"
@@ -11,6 +11,12 @@ cask "cadence" do
   depends_on arch: :arm64
 
   app "Cadence.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Cadence.app"],
+                   must_succeed: false
+  end
 
   caveats <<~EOS
     Cadence is ad-hoc signed (not Apple-notarized).

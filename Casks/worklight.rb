@@ -1,6 +1,6 @@
 cask "worklight" do
-  version "0.2.0"
-  sha256 "217d882a1a1aa9fda02a338efbf8060ad358498dce9bebd166c7d9bcafa74d26"
+  version "0.2.1"
+  sha256 "fd1c10dfc1e0c0b25c9d027bde95382c8a63356cdf5726b8e837442c588d45b2"
 
   url "https://github.com/alexandryasukaitisss-cmd/worklight-macos/releases/download/v#{version}/WorkLight-#{version}-macos-arm64.zip"
   name "WorkLight"
@@ -11,6 +11,12 @@ cask "worklight" do
   depends_on arch: :arm64
 
   app "WorkLight.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/WorkLight.app"],
+                   must_succeed: false
+  end
 
   caveats <<~EOS
     WorkLight is ad-hoc signed (not Apple-notarized).
