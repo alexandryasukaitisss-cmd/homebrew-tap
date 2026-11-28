@@ -14,7 +14,7 @@ cask "cadence" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Cadence.app"],
+                   args: ["-cr", "#{appdir}/Cadence.app"],
                    must_succeed: false
   end
 

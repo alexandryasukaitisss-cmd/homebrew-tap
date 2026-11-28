@@ -14,7 +14,7 @@ cask "ambientdisplay" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/AmbientDisplay.app"],
+                   args: ["-cr", "#{appdir}/AmbientDisplay.app"],
                    must_succeed: false
   end
 

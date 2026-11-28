@@ -14,7 +14,7 @@ cask "worklight" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/WorkLight.app"],
+                   args: ["-cr", "#{appdir}/WorkLight.app"],
                    must_succeed: false
   end
 

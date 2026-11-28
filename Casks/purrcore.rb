@@ -14,7 +14,7 @@ cask "purrcore" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/PurrCore.app"],
+                   args: ["-cr", "#{appdir}/PurrCore.app"],
                    must_succeed: false
   end
 

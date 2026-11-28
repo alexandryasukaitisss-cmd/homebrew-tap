@@ -14,7 +14,7 @@ cask "ha-pip-cam" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/HAPiPCam.app"],
+                   args: ["-cr", "#{appdir}/HAPiPCam.app"],
                    must_succeed: false
   end
 
