@@ -1,6 +1,6 @@
 cask "cadence" do
-  version "0.2.3"
-  sha256 "fefda94c9f1a7c68ce73c7988c11970b32029117facacf0060adf654f2ff8b2a"
+  version "0.2.4"
+  sha256 "ff6f45ae397121b706f86dbfa98bacc0a938145b54772c89faee06acec0405bd"
 
   url "https://github.com/alexandryasukaitisss-cmd/cadence-macos/releases/download/v#{version}/Cadence-#{version}-macos-arm64.zip"
   name "Cadence"

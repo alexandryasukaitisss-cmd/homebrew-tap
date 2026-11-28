@@ -1,6 +1,6 @@
 cask "worklight" do
-  version "0.2.4"
-  sha256 "86f1a143586fa22abad2122a549e1bf899533fd22ed6c7222760daf79c995613"
+  version "0.2.5"
+  sha256 "4ce7a0abcc22ef12bb47443e605e05d9f887d8e3008fe81dfa7c33c250d9c22c"
 
   url "https://github.com/alexandryasukaitisss-cmd/worklight-macos/releases/download/v#{version}/WorkLight-#{version}-macos-arm64.zip"
   name "WorkLight"
