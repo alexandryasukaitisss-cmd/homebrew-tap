@@ -1,6 +1,6 @@
 cask "ha-pip-cam" do
-  version "0.2.2"
-  sha256 "0f379aeec2ed8ca6e735666cfaca4dfb5c7adf58efd5bc85cd3091feeeb8e6b8"
+  version "0.2.3"
+  sha256 "aee8c42f5d2d98ae1800b8db3eb08bbfdd9e0e4b46f4e1f3aef9c090ec152495"
 
   url "https://github.com/alexandryasukaitisss-cmd/ha-pip-cam-macos/releases/download/v#{version}/HAPiPCam-#{version}-macos-arm64.zip"
   name "HA PiP Cam"

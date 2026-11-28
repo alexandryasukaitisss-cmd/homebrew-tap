@@ -1,6 +1,6 @@
 cask "ambientdisplay" do
-  version "0.2.2"
-  sha256 "e44b2e6f466c16cbbc5e5e6978c7ff12e964b4609f1f11020324b07627a7b2d4"
+  version "0.2.3"
+  sha256 "f6bef83af257bf40a47fef8880a3cef5bb92a10dc97e9d5de681c59c6335d13d"
 
   url "https://github.com/alexandryasukaitisss-cmd/ambient-display-macos/releases/download/v#{version}/AmbientDisplay-#{version}-macos-arm64.zip"
   name "AmbientDisplay"
